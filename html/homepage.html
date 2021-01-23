@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Authors: Judy MEZABER, Omar SALAHDDINE -->
+<html>
+
+<head>
+  <title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="mainStyle.css">
+</head>
+
+<body>
+  <div class="sidenav">
+    <img src="LOGO.jpg">
+    <a href="group.php">Groups</a>
+    <br/>
+    <!--  	<a href="#services">Services</a>
+	<a href="#clients">Clients</a>
+  	<a href="#homepage">Contact</a> -->
+    <a href="group1.html">Group 1</a>
+    <br/>
+    <a href="Connections.html">Connections</a>
+    <br/>
+    <a href="OwnerList.php">Owner List</a>
+  </div>
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <div class="topnav-right">
+      <a href="MessageBox_fake.html">Inbox </a>
+      <!--LOGIN SYSTEM TEST-->
+      <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+      <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="authenticate.php" method="post">
+          <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="psw">Register <a href="Register.html">Register</a></span>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+      <!--LOGIN SYSTEM TEST-->
+      <a href="Register.html">Register</a>
+    </div>
+  </div>
+  <div class="main">
+    <br>
+    <h1 style ="text-align: center">Welcome to CON</h1>
+    <div>
+        <p style ="text-align: center">This is the general Timeline</p>
+    </div>
+    <img src ="TimelineImage_1.jpg" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;"></img>
+    <p style ="text-align: center">Login and interact with other condo-owners today !</p>
+  </div>
+</body>
+
+</html>

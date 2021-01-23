@@ -1,0 +1,70 @@
+<?php
+	include_once 'db_connection.php';
+?>
+
+<!DOCTYPE html>
+<!-- Author: Judy Mezaber -->
+<html>
+
+<head>
+	<title>Group</title>
+	<meta http-equiv="refresh" content="0; url = group.php">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mainStyle.css">
+</head>
+
+<body>
+
+	<div class="sidenav">
+		<img src="LOGO.jpg">
+		<a href="group.php">Groups</a>
+		<br/>
+		<!--  	<a href="#services">Services</a>
+		<a href="#clients">Clients</a>
+		  <a href="#homepage">Contact</a> -->
+		<a href="group1.html">Group 1</a>
+		<br/>
+		<a href="Connections.html">Connections</a>
+		<br/>
+		<a href="OwnerList.php">Owner List</a>
+	  </div>
+
+	<div class="topnav">
+		<a href="homepage.html">HOME</a>
+	</div>
+
+	<div class="main">
+		<a href="createGroupForm.html"><button type="button">Create a Group</button></a>
+		<br>
+		<h1>Groups</h1>
+		<div>
+			<form>
+				[List of available groups goes here]
+				<input type="checkbox" id="someID1" name="someGroupName1" value="SomeGroup1">
+				<br>
+				[List of available groups goes here]
+				<input type="checkbox" id="someID2" name="someGroupName2" value="SomeGroup2">
+				<br>
+				<input type="submit" name="join" value="Join">
+			</form>
+		</div>
+
+		<?php
+
+			$sql = "select * Members;";
+			$result = mysqli_query($conn, $sql);
+			$resultCheck = mysqli_num_rows($result);
+
+			if($resultCheck > 0)
+			{
+				while($row = mysqli_fetch_assoc($result))
+				{
+					echo $row['FirstName'];
+				}
+			}		
+		?>
+	</div>
+
+</body>
+
+</html>

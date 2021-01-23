@@ -1,2 +1,5 @@
-# Condo-Association-Website
-CA website that allows people to meet eachother, post pictures and send messages/emails.
+# COMP353
+COMP353 Final Project
+
+# Objective:
+Create a Condo-association Online Network System (CON)
